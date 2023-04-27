@@ -19,6 +19,10 @@ class Node:
             self._children.append(node)
             if not node.parent is self: 
                 node.parent = self # setting, but avoid recursion
+    
+    def add_children(self, children):
+        for child in children:
+            self.add_child(child)        
             
 
     def remove_child(self, node):
